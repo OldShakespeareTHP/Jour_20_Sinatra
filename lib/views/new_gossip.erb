@@ -1,0 +1,27 @@
+<%# Fichier html dans lequel je peux ajouter du RUby %>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="<%= url("/style.css")%>">
+    <title>Creer un potin</title>
+  </head>
+  <body>
+  <header>
+    <nav class="navbar">
+    <ul>
+    <li><a href='/'>Accueil</a></li>
+    </ul>
+    </nav>
+    </header>
+    <section>
+    <h1>Balance du potin !</h1>
+    <p>Inscris ton potin via le formulaire ci-dessous</p>
+    <ul class="center_li">
+    <form action='/gossips/new/' method='POST'>
+      <li class="center_li">Saisi ici ton nom : <input type='text' name='gossip_author'/></li><br/>
+      <li class="center_li">Balance ton potin : <textarea rows="5" cols="40" type='text' name='gossip_content'></textarea></li>
+      <li class="center_li" style="margin-top: 10px"><input type='submit'/></li>
+      </form>
+      </ul>
+      </section>
+  </body>
+</html>

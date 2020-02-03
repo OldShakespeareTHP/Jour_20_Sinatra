@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="<%= url("/style.css")%>">
+
+          <meta charset="utf-8">
+    <title>PAGE POTIN</title>
+  </head>
+  <body>
+  <header>
+      <nav class="navbar">
+    <ul>
+    <li><a href='/'>Accueil</a></li>
+    <li><a href='/gossips/new/'>Ajouter un potin</a></li>
+    <li><a href ='edit/'>Editer le potin</a></p></li>
+    </ul>
+    </nav>
+    </header>
+    <section>
+    <p>
+    <h1>Voici la page du potin n.<%= id_of_page%></h1>
+    </p>
+    <p>
+    Son auteur : ==<%= gossip.author%>==<br/>
+    Le contenu du potin : ==<%= gossip.content%>==
+    </p>
+    <hr/>
+    <% if gossip.comments.nil? == false  %>
+      <p>
+        <strong>Commentaire</strong><br/>
+        <%= gossip.comments.time %>
+        <ul>
+        <%= gossip.comments.author%><br/>
+        >> <%= gossip.comments.content%>
+        </ul>
+      </p>
+      <% end%>
+      <hr/>
+    <form action='' method='POST'>
+    <ul class="center_li" style="border-top: thick double">
+    <p>Ajouter un commentaire</p>
+      <li class="center_li">Auteur : <input type='text' name='com_author'/></li>
+      <li class="center_li">Commentaire : <textarea rows="5" cols="40" type='text' name='com_content'></textarea></li>
+      <li class="center_li" style="margin-top: 10px"><input type='submit'/></li>
+      </ul>
+    </form>
+    </section>
+  </body>
+</html>

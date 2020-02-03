@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="<%= url("/style.css")%>">
+    <title>Modifier le potin</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+    <ul>
+    <li><a href='/'>Accueil</a></li>
+    <li><a href='/gossips/new/'>Ajouter un potin</a></li>
+    </ul>
+    </nav>
+    </header>
+    <section>
+    <h1>Edite le potin</h1>
+    <ul class="center_li">
+    <form action='' method='POST'>
+      <li class="center_li">Saisi ici ton nom : <input type='text' name='gossip_author'/></li><br/>
+      <li class="center_li">Saisi le nouveau potin : <textarea rows="5" cols="40" type='text' name='gossip_content'></textarea></li>
+      <li class="center_li" style="margin-top: 10px"><input type='submit'/></li>
+      </ul>
+    </form>
+    </section>
+  </body>
+      <%# <li class="center_li">Saisi le nouveau potin : <input type='text' name='gossip_content'/></li><br/> %>
