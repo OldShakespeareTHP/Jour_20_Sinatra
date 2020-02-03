@@ -1,6 +1,7 @@
 # **The Gossip Project, avec Sinatra**
 
 Genere un site affichant une liste de potins. Possible d'editer ou d'ajouter des potins, ainsi que de les commenter.
+Fait avec Sinatra, organisation avec Model-View-Controller.
 
 ## :black_square_button: **Installation**
 
