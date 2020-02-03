@@ -1,9 +1,19 @@
-# **Gossip, avec Sinatra**
+# **The Gossip Project, avec Sinatra**
 
-## **Installation**
+Genere un site affichant une liste de potins. Possible d'editer ou d'ajouter des potins, ainsi que de les commenter.
 
-> :small_blue_diamond: git clone 
-> :small_blue_diamond: bundle install
-> :small_blue_diamond:shotgun -p 4567
-> :small_blue_diamond: ouvrir la page [http://localhost:4567/](http://localhost:4567/)
+## :black_square_button: **Installation**
+
+1. ```git clone https://github.com/ForejyTHP/Jour_20_Sinatra.git```
+2. ```cd Jour_20_Sinatra```
+3. ```bundle install```
+4. ```shotgun -p 4567```
+## :black_square_button: Ouvrir la page suivante :
+[http://localhost:4567/](http://localhost:4567/)
  
+<details> <summary> A venir</summary>
+ 
+ Commentaires multiples, et nested </details>
+
+## 👤Auteur
+Joffrey Marques : [ForejyTHP](https://github.com/ForejyTHP)
