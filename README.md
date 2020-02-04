@@ -14,7 +14,10 @@ Fait avec Sinatra, organisation avec Model-View-Controller.
  
 <details> <summary> A venir</summary>
  
- Commentaires multiples, et nested </details>
+* ``` Commentaires multiples, et nested ```
+* ``` Liens vers les potins sur l'index ```
+* ``` Fichier source avec des potins realistes ou des citations de films ```
+</details>
 
 ## 👤Auteur
 Joffrey Marques : [ForejyTHP](https://github.com/ForejyTHP)
