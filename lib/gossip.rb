@@ -1,9 +1,8 @@
 require 'bundler'
 Bundler.require
-
 require 'csv'
-#Ptete besoin d'un path
 require 'comments'
+
 class Gossip
   attr_reader :author, :content
   attr_accessor :comments
@@ -24,8 +23,9 @@ class Gossip
     end
   end
 
-#CSV.read retourn une [[],[],...]
-#Avec map qui prends une [] en entree, on peut retourner une array dont chaque element a ete traite par le block
+#CSV.read retourne une array d'arrays
+#Avec map qui prends une array en entree, on peut retourner une array dont chaque sous-array a ete traite par le block
+#ary[2], ary[3] et ary[4] c'est respectivement l'auteur du commentaire, son contenu, et la date a laquelle il a ete ecrit
   def self.all
     all_gossips = CSV.read("./db/gossip.csv").map do |ary|
       (ary[2].nil? || ary[3].nil? || ary[4].nil?)  ? temp_comment = nil : temp_comment = Comments.new(ary[2], ary[3], ary[4])

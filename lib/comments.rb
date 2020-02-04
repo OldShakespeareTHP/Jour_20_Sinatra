@@ -1,5 +1,5 @@
 #Classe qui permet de creer un commentaire
-#la variable answer c'est pour ajouter des reponses a chaque commentaires, mais pour le moment ce n'est pas fonctionnel
+#Fonction a venir : commentaires nested, avec la variable @anwser
 
 class Comments
   attr_reader :author, :content, :time

@@ -1,8 +1,5 @@
 require 'bundler'
 Bundler.require
-
-# $:.unshift File.expand_path("./../lib/", __FILE__)
-# require_relative 'lib/gossip.rb'
 require 'gossip.rb'
 
 class ApplicationController < Sinatra::Base
@@ -23,8 +20,6 @@ class ApplicationController < Sinatra::Base
     id_ = params['id']
     pp Gossip.find(id_.to_i)
     erb :show, locals: {id_of_page: id_, gossip: Gossip.find(id_.to_i)}
-    # gossip = Gossip.find(id_.to_i)
-    # "Gossip a l'id #{id_} : #{gossip.author}, #{gossip.content}"
   end
 
   post '/gossips/:id/' do
@@ -32,7 +27,6 @@ class ApplicationController < Sinatra::Base
     comment = Comments.new(params['com_author'], params['com_content'])
     gossip_to_comment = Gossip.find(id_)
     gossip_with_com = Gossip.new(gossip_to_comment.author, gossip_to_comment.content, comment)
-    pp gossip_with_com
     Gossip.update(id_, gossip_with_com)
     redirect "/gossips/#{params['id']}/"
   end
